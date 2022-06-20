@@ -1,0 +1,6 @@
+1: hacer los modelos en models
+2: verificar que la aplicacion este en settings en INSTALLED_APPS =[]
+3: ejecutar los sigts comandos:
+	python manage.py makemigrations (esto crea la migracion de los modelos en un archivo)
+	python manage.py sqlmigrate miapp 0001 (esto crea el sql de las tablas)
+	python manage.py migrate (crea y guarda todo, aplica la migracion al proyecto)

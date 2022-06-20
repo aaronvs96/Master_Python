@@ -1,0 +1,8 @@
+en la carpeta de la app, abrir el archivo admin:
+
+importamos el archivo models y el modelo, así:
+from .models import Page
+(Page es el nombre del modelo)
+
+y agregar la siguiente linea para registrar el modelo:
+admin.site.register(Page)

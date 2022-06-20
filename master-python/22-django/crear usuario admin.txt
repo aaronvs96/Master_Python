@@ -1,0 +1,5 @@
+para crear usuario administrador del panel de administracion de django
+
+python manage.py createsuperuser
+
+(se coloca los datos y listo)

@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %} 
+    {{title}} 
+{% endblock %}
+
+{% block content %}  
+    
+    <!--Est es un comentario-->
+    {% comment 'Nota para el comentario' %}
+        <h1>Este h1 no lo muestra el HTML porque está dentro de un bloque comentario de django</h1>
+        <h1>Esto no lo renderiza el navegador</h1>
+    {% endcomment %}
+
+    <h1 class="title">{{title}}</h1>
+
+    <p>{{mi_variable}}</p>
+
+    {% if nombre and nombre == 'Victor Robles' %}
+        <p>{{nombre}}</p>
+    {% else %}
+        <strong>El nombre no existe o no coincide</strong>    
+    {% endif%}
+
+    <h3>Lista de lenguajes de programación:</h3>
+    <ul>
+    {% for lenguaje in lenguajes %}
+        <li>{{forloop.counter}}. {{lenguaje}} </li>
+    {% empty %}
+        <p>NO HAY LENGUAJES QUE MOSTRAR</p>
+    {% endfor %}
+    </ul>
+
+    {% include 'fecha-actual.html' with saludo="Hola mundo desde plantilla:" %}
+
+{% endblock %}

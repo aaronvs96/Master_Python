@@ -1,0 +1,8 @@
+abrir cmd y colocar el comando sigte:
+django-admin startproject ProyectoDjango
+
+"Proyecto Django" es el nombre del proyecto que quieres crear
+
+
+CREAR UNA APP DENTRO DEL PROYECTO:
+C:\wamp64\www\master-python\22-django\ProyectoDjango>python manage.py startapp mainapp

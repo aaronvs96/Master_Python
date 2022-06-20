@@ -1,0 +1,54 @@
+{%  extends 'layout.html' %}
+{% load filters %}
+
+{% block title %}Pagina de pruebas {% endblock %}
+
+{% block content %}
+
+    <h1 class="title">Página de mi web</h1>
+    <p>{{"Creado por Víctor Robles ñññ"|cut:"ñ" }}</p><!-- cut:" " sirve para quitar caracteres-->
+
+    {{texto|default:"No hay nada"}} <!--comprueba si la variable tiene algo y si no muestra el default-->
+    
+    <p>
+        {{lista|first}} <!-- imprimir el PRIMER elemento-->
+    </p>
+
+    <p>
+        {{lista|last}} <!-- imprimir el ULTIMO elemento-->
+    </p>
+
+    <p>
+        {{lista|join:', '}} <!-- unir elementos de lista seguido por comas usando join-->
+    </p>
+
+    <p>
+        {{lista|random}} <!-- muestra aleatoriamente elementos de la lista-->
+    </p>
+
+    <p>
+        {{lista|length}} <!-- mostrar el total de elementos de listas-->
+    </p>
+
+    <p>
+        {{"texto de pruebas"|length}} <!-- mostrar el total de elementos de un texto-->
+    </p>
+
+    <p>
+        {{"texto de pruebas"|upper}} <!-- texto en MAYUSCULAS-->
+    </p>
+
+    <p>
+        {{"texTO de PRUEbas"|lower}} <!-- texto en MINUSCULAS-->
+    </p>
+
+    <p>
+        {{"<h1>texTO</h1> <strong>PRUEbas</strong>"|striptags}} <!-- quita los nodos HTML y muestra el texto -->
+    </p>
+
+    <p>
+        {{"<h1>texTO</h1> <strong>PRUEbas hello</strong> hola <p>mundo</p>"|striptags|wordcount}} <!-- cuenta las palabras-->
+    </p>
+    
+    {{"Victor"|saludo|safe}}
+{% endblock %}
