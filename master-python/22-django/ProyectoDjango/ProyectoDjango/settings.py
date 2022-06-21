@@ -80,12 +80,28 @@ WSGI_APPLICATION = 'ProyectoDjango.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# CONFIGURACION PARA SQLITE
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+"""
+
+#CONFIGURACION CON MYSQL
+DATABASES = {
+    'default':{
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'proyectodjango',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': 3306
+    }
+}
+
 
 
 # Password validation

@@ -181,6 +181,24 @@ nav > ul > li:hover > ul > li:hover a{
     margin: 0 auto;
 }
 
+.box .image{
+    width: 45%;
+    float: left;
+    margin-right: 40px;
+}
+.box .image img{
+    width: 100%;
+}
+
+
+.box a{
+    color: #444;
+}
+.box a:hover{
+    transition: all 300ms;
+    color: #1f7e58;
+}
+
 
 /* Estilos para el formulario */
 .box form{
@@ -195,6 +213,8 @@ nav > ul > li:hover > ul > li:hover a{
 }
 
 .box form input[type="text"],
+.box form input[type="email"],
+.box form input[type="password"],
 .box form textarea,
 .box form select{
     width: 100%;
@@ -226,12 +246,18 @@ nav > ul > li:hover > ul > li:hover a{
     font-weight: bold;
     color: red;
 }
-.message{
+.message,
+.alert-success,
+.alert{
     padding: 20px;
     background: green;
     color: white;
     text-align: center;
     margin-bottom: 10px;
+}
+
+.alert-warning{
+    background: #972824;
 }
 
 .box input[type="submit"]:hover,

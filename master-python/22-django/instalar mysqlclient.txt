@@ -1,0 +1,13 @@
+despues de haber configurar el DATABASES con mysql en el archivo settings del proyecto django
+se debe tener instalado el mysqlclient,
+ingresar el siguiente comando por cmd en la ruta del proyecto:
+
+pip install mysqlclient
+
+si sale error entonces buscar en:
+https://www.lfd.uci.edu/~gohlke/pythonlibs/
+
+elegimos el instalador de 64 bits y con la versión de python que tengamos instalado.
+
+FINALMENTE debemos migrar las columnas a la base de datos a mysql: (con este paso no se migran los datos, solo columnas y relaciones)
+python manage.py migrate
