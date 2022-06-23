@@ -8,32 +8,40 @@
     {% endif %}
 
     <div class="data">
-        <h2>
-            <a href="{% url 'article' article.id %}" >
-                {{article.title}}
-            </a>
-        </h2>
-        <p>
-            {% for category in article.categories.all %}
-                <a href="{% url 'category' category.id %}">{{category.name}}</a>
+        {% comment %} {% for arts in articles_in_use.all %} {% endcomment %}
 
-                {% comment %} el siguiente if sirve para agregar guion despues de cada categoria {% endcomment %}
-                {% if forloop.counter < article.categories.all|length %}
-                    {{'-'}}
-                {% endif %}
-            {% endfor %}
-        </p>
-        <span class="date">
+            <h2>
+                <a href="{% url 'article' article.id %}" >
+                    {{article.title}} {{article.public}}
+                </a>
+            </h2>
             
-            {{article.user.first_name}} {{article.user.last_name}}
-            |
-            {{article.created_at}}
-        </span>
-            
-        <p>
-            {{article.content|safe}}
-            {% comment %} se coloca |safe para que el texto salga sin el html {% endcomment %}
-        </p>
+            <p>
+                {% for category in article.categories.all %}
+                    <a href="{% url 'category' category.id %}">{{category.name}}</a>
+
+                    {% comment %} el siguiente if sirve para agregar guion despues de cada categoria {% endcomment %}
+                    {% if forloop.counter < article.categories.all|length %}
+                        {{'-'}}
+                    {% endif %}
+                {% endfor %}
+            </p>
+            <span class="date">
+                
+                {{article.user.first_name}} {{article.user.last_name}}
+                |
+                {{article.created_at}}
+            </span>
+                
+            <p>
+                {{article.content|safe}}
+                {% comment %} se coloca |safe para que el texto salga sin el html {% endcomment %}
+            </p>
+        
+        {% comment %} {% endfor %} {% endcomment %}
+        
+
+
     </div>
     
     <div class="clearfix"></div>

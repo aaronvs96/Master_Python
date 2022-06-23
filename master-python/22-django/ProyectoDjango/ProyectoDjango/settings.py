@@ -68,7 +68,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'pages.context_processors.get_pages', #importamos el modelo get_pages del archivo context_processors que hemos creado
-                'blog.processor.get_categories' #importamos el modelo get_categories del archivo processor que hemos creado
+                'blog.processor.get_categories', #importamos el modelo get_categories del archivo processor que hemos creado
+                'blog.processor.get_articles'
             ],
         },
     },
@@ -81,26 +82,25 @@ WSGI_APPLICATION = 'ProyectoDjango.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 # CONFIGURACION PARA SQLITE
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-"""
 
 #CONFIGURACION CON MYSQL
-DATABASES = {
-    'default':{
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'proyectodjango',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': 3306
-    }
-}
+# DATABASES = {
+#     'default':{
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'proyectodjango',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#         'PORT': 3306
+#     }
+# }
 
 
 

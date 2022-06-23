@@ -5,7 +5,7 @@
 {% block content %}
     <h1 class="title">{{category.name}}</h1>
     <p>{{category.description}}</p>
-
+    
     {% include 'articles/articles.html' with articles=category.articles.all %} 
     {% comment %}   colocamos with articles=category.articles.all 
                     porque el modelo Article está relacionado con Category
