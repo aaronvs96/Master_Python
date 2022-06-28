@@ -9,3 +9,11 @@ def get_categories(request):
         'categories': categories,
         'ids': categories_in_use
     }
+
+def get_articles(request):
+
+    articles_in_use = Article.objects.filter(public=True).values_list('id','title')
+
+    return {
+        'articles_in_use': articles_in_use
+    }
