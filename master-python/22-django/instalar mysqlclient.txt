@@ -11,3 +11,7 @@ elegimos el instalador de 64 bits y con la versión de python que tengamos insta
 
 FINALMENTE debemos migrar las columnas a la base de datos a mysql: (con este paso no se migran los datos, solo columnas y relaciones)
 python manage.py migrate
+
+
+
+//xdxxddddxdxdxd
