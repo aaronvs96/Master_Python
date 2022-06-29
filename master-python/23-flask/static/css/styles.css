@@ -330,12 +330,16 @@ nav > ul > li:hover > ul > li:hover a{
 .btn{
     padding: 10px;
     background: rgb(216, 56, 56);
-    color: white;
+    color: white !important;
     border: 1px solid black;
     display: block;
     margin-top: 20px;
     width: 100px;
     text-align: center;
+}
+
+.btn-warning{
+    background: rgb(243, 162, 32);
 }
 
 footer{

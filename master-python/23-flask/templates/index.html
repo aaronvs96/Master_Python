@@ -8,6 +8,17 @@
     
     <h1>Página de Inicio</h1>
 
+    {# si es que el mensaje flash llega del main.py entonces sigue lo siguiente #}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages%}
+                <div class="message alert-success">
+                    {{message}}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
     {%include 'includes/edad.html'%}
     {%include 'includes/personas.html'%}
 

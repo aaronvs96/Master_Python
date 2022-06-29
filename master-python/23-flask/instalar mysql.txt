@@ -1,0 +1,6 @@
+ir al link:
+
+https://flask-mysqldb.readthedocs.io/en/latest/
+
+
+pip install flask-mysqldb
